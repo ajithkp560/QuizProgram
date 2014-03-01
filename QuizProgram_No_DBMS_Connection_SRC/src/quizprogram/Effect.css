@@ -1,0 +1,51 @@
+.button {
+    -fx-opacity: 1;
+}
+
+.unlock-button .text {
+    -fx-effect: dropshadow( one-pass-box , rgb(0, 0, 0, 0.8), 0, 0.0 , 0 , -1 );
+}
+
+.unlock-button {
+    -fx-background-color: #c3c4c4,
+		linear-gradient(#d9d9d9 50%, white 100%),
+		radial-gradient(center 50%-40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+	-fx-background-insets: 0, 1, 2;/*0 0 -1 0, 0, 1;*/
+    -fx-background-radius: 7, 6, 5, 4, 3, 5;
+	-fx-font-family: "Agency FB";
+    -fx-text-fill: black;
+    -fx-font-size: 35;
+    -fx-text-fill: black;/*linear-gradient(black, #000000);*/
+    -fx-padding: 10 20 10 20;
+}
+
+.unlock-button:hover {
+    -fx-background-color: #c3c4c4,
+		linear-gradient(#d9d9d9 100%, white 50%),
+		radial-gradient(center 60%-50%, radius 200%, #e6e6e6 50%, rgba(230,230,230,0) 45%);
+	-fx-background-insets: 0 0 -1 0, 0, 1;
+}
+
+.unlock-button:pressed {
+	-fx-background-color: white;
+    	/*rgb(255, 255, 255, 0.08),
+    	white,
+        #090a0c,
+        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#242a2e, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,1),
+        rgba(255,255,255,0.15));*/
+}
+
+.unlock-top {
+    -fx-fill: #d9d9d9;/*#424952;*/
+}
+
+.unlock-bottom {
+	-fx-fill: #e6e6e6;/*#2d3238;*/
+}
+
+/*.unlock-leftright {
+	-fx-fill: #2d3238;
+}*/
+

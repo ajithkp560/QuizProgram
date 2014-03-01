@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#KeyPressed" onKeyReleased="#KeyRel" prefHeight="593.0" prefWidth="803.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="quizprogram.SampleController">
+  <children>
+    <Button fx:id="button" layoutX="454.0" layoutY="539.0" onAction="#nextQ" onMouseEntered="#mouseOver" onMouseExited="#mouseExit1" prefHeight="30.0" prefWidth="131.0" style="&#9;-fx-background-color:rgba(0,0,0,0,0.08), linear-gradient(#5a61af, #51536d), linear-gradient(#e4fbff 0%, #cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);&#10;&#9;-fx-background-insets: 0 0 -1 0, 0, 1;&#10;&#9;-fx-background-radius: 30;&#10;&#9;-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 3, 0.0, 0, 1);&#10;&#9;-fx-padding: 3 30 3 30;&#10;&#9;-fx-text-fill: #242d35;&#10;&#9;-fx-font-size: 14px;" text="Next">
+      <effect>
+        <Reflection />
+      </effect>
+    </Button>
+    <Button fx:id="button2" layoutX="222.0" layoutY="539.0" mnemonicParsing="false" onAction="#prevQ" onMouseEntered="#mouseOver2" onMouseExited="#mouseExit2" prefHeight="30.0" prefWidth="131.0" style="&#9;-fx-background-color:rgba(0,0,0,0,0.08), linear-gradient(#5a61af, #51536d), linear-gradient(#e4fbff 0%, #cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);&#10;&#9;-fx-background-insets: 0 0 -1 0, 0, 1;&#10;&#9;-fx-background-radius: 30;&#10;&#9;-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 3, 0.0, 0, 1);&#10;&#9;-fx-padding: 3 30 3 30;&#10;&#9;-fx-text-fill: #242d35;&#10;&#9;-fx-font-size: 14px;" text="Previous">
+      <effect>
+        <Reflection />
+      </effect>
+    </Button>
+    <Separator layoutX="0.0" layoutY="505.0" prefHeight="12.0" prefWidth="803.0" />
+    <Label fx:id="question" alignment="CENTER" layoutX="14.0" layoutY="82.0" prefHeight="174.0" prefWidth="775.0" text="" textAlignment="CENTER" textFill="#242d35">
+      <font>
+        <Font name="Lucida Sans Unicode" size="30.0" />
+      </font>
+    </Label>
+    <HBox id="HBox" alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="5.0">
+      <children>
+        <Label fx:id="timex" alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="173.0" text="" textFill="#cc0000">
+          <font>
+            <Font name="Agency FB Bold" size="30.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="qsno" alignment="CENTER" font="$x1" prefHeight="68.0" prefWidth="402.0" text="" />
+        <Label fx:id="scoreB" alignment="CENTER_RIGHT" font="$x1" prefHeight="68.0" prefWidth="190.0" text="" textFill="#006629" />
+      </children>
+    </HBox>
+    <AnchorPane fx:id="optionPane" layoutX="14.0" layoutY="269.0" prefHeight="190.0" prefWidth="775.0">
+      <children>
+        <Group id="Group" layoutX="93.0" layoutY="57.0">
+          <children>
+            <RadioButton fx:id="a1" layoutX="46.0" layoutY="-8.0" mnemonicParsing="false" text="">
+              <font>
+                <Font name="System Bold Italic" size="14.0" fx:id="x2" />
+              </font>
+            </RadioButton>
+            <RadioButton fx:id="a2" font="$x2" layoutX="46.0" layoutY="65.0" mnemonicParsing="false" text="" />
+            <RadioButton fx:id="a3" font="$x2" layoutX="425.0" layoutY="-8.0" mnemonicParsing="false" text="" />
+            <RadioButton fx:id="a4" font="$x2" layoutX="425.0" layoutY="65.0" mnemonicParsing="false" text="" />
+          </children>
+        </Group>
+      </children>
+    </AnchorPane>
+    <Button id="sub" fx:id="subm" layoutX="366.0" layoutY="517.0" mnemonicParsing="false" onAction="#submitted" onMouseEntered="#mouseOver3" onMouseExited="#mouseExit3" prefHeight="68.0" prefWidth="76.0" style="-fx-background-color:rgba(0,0,0,0,0.08), linear-gradient(#5a61af, #51536d), linear-gradient(#e4fbff 0%, #cee6fb 10%, #a5d3fb 50%, #88c6fb 51%, #d5faff 100%);&#10;-fx-background-radius: 70;" text="">
+      <graphic>
+        <ImageView id="sub" fitHeight="55.0" fitWidth="61.0" pickOnBounds="true">
+          <image>
+            <Image url="@apple.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Separator layoutX="14.0" layoutY="82.0" prefWidth="775.0000999999975" />
+    <Separator layoutX="14.0" layoutY="256.0" prefWidth="775.0" />
+    <Rectangle fx:id="unlocktop" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="297.0" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" styleClass="unlock-top" visible="true" width="803.0" />
+    <Rectangle fx:id="unlockbottom" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="297.0" layoutX="0.0" stroke="BLACK" strokeType="INSIDE" styleClass="unlock-bottom" visible="true" width="803.0" AnchorPane.bottomAnchor="0.0" />
+    <Button fx:id="lock" layoutX="264.0" layoutY="254.0" mnemonicParsing="false" onAction="#unlockPressed" prefHeight="82.0" prefWidth="297.0" styleClass="unlock-button" text="Are You Ready?" visible="true">
+      <graphic>
+        <ImageView id="lock" pickOnBounds="true">
+          <image>
+            <Image url="@lock.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </graphic>
+    </Button>
+    <Label fx:id="bcarock" layoutX="594.0" layoutY="557.0" prefHeight="24.0" prefWidth="194.99990000000253" text="Designed By BCA IV Semester">
+      <font>
+        <Font name="System Bold" size="12.0" />
+      </font>
+    </Label>
+    <AnchorPane fx:id="finishx" layoutX="-8.0" layoutY="-8.0" prefHeight="608.0" prefWidth="818.0" style="-fx-background-color: black;-fx-alignment: CENTER;" />
+  </children>
+  <stylesheets>
+    <URL value="@Effect.css" />
+  </stylesheets>
+</AnchorPane>
